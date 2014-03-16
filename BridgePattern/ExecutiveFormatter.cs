@@ -10,7 +10,7 @@ namespace BridgePattern
     {
         public string Format(string key, string value)
         {
-            return string.Format("<italics> {0} ----- =-- {1} <italics/>", key, value);
+            return string.Format("<italics> {0} ----- =-- {1} </italics>", key, value);
         }
     }
 }

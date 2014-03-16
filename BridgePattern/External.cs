@@ -10,20 +10,21 @@ namespace BridgePattern
     {
         
         public int ExternalId { get; set; }
-        public Member Member { get; set; }
+        public string Member { get; set; }
 
         public Dictionary<string, string> Procedures { get; set; }
 
         public External(IFormatter formatter)
             : base(formatter)
         {
+         
             Procedures = new Dictionary<string, string>(); 
         }
 
         public override void Print()
         {
-            Console.WriteLine(formatter.Format("Pharmacy Number", ExternalId.ToString()));
-            Console.WriteLine(formatter.Format("Member Name", Member.FirstName + " " + Member.LastName));
+            Console.WriteLine(formatter.Format("Pharmacy Number", ExternalId.ToString())); 
+            Console.WriteLine(formatter.Format("Member", Member));
             foreach (var item in Procedures)
             {
                 Console.WriteLine(formatter.Format("Code", item.Key));

@@ -9,7 +9,7 @@ namespace BridgePattern
     public class Pharmacy : Referral
     {
         public int PharmacyReferralId { get; set; }
-        public Member Member { get; set; }
+        public string Member { get; set; }
 
         public Dictionary<string, string> NationalDrugCode { get; set; }
 
@@ -17,6 +17,7 @@ namespace BridgePattern
         public Pharmacy(IFormatter formatter)
             : base(formatter)
         {
+          
             NationalDrugCode = new Dictionary<string, string>(); 
 
         }
@@ -24,7 +25,7 @@ namespace BridgePattern
         public override void Print()
         {
             Console.WriteLine(formatter.Format("Pharmacy Number", PharmacyReferralId.ToString()));
-            Console.WriteLine(formatter.Format("Member Name", Member.FirstName + " " + Member.LastName));
+            Console.WriteLine(formatter.Format("Member", Member));
             foreach (var drug in NationalDrugCode)
             {
                 Console.WriteLine(formatter.Format("Code", drug.Key));
