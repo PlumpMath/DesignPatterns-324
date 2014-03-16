@@ -9,6 +9,10 @@ namespace BridgePattern
     public class Pharmacy : Referral
     {
         public int PharmacyReferralId { get; set; }
+        public Member Member { get; set; }
+
+        public string NationalDrugCode { get; set; }
+
 
         public Pharmacy(IFormatter formatter)
             : base(formatter)
@@ -18,7 +22,10 @@ namespace BridgePattern
 
         public override void Print()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(formatter.Format("Pharmacy Number", PharmacyReferralId.ToString()));
+            Console.WriteLine(formatter.Format("Member Name", Member.FirstName + " " + Member.LastName));
+            Console.WriteLine(formatter.Format("Drugs", NationalDrugCode));
+            Console.WriteLine();
         }
 
 
