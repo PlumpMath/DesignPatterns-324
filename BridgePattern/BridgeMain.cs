@@ -8,5 +8,8 @@ namespace BridgePattern
 {
     public class BridgeMain
     {
+        List<Referral> authorizations = new List<Referral>();
+
+
     }
 }

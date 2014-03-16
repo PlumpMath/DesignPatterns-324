@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace BridgePattern
 {
-    public class Pharmacy
+    public class Pharmacy : Referral
     {
+        public int PharmacyReferralId { get; set; }
+
+        public Pharmacy(IFormatter formatter)
+            : base(formatter)
+        {
+
+        }
+
+        public override void Print()
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

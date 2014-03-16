@@ -42,6 +42,7 @@
     <Compile Include="BridgeMain.cs" />
     <Compile Include="IFormatter.cs" />
     <Compile Include="Internal.cs" />
+    <Compile Include="Member.cs" />
     <Compile Include="Pharmacy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="External.cs" />
