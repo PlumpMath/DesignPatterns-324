@@ -23,7 +23,7 @@ namespace BridgePattern
 
         public override void Print()
         {
-            Console.WriteLine(formatter.Format("Pharmacy Number", ExternalId.ToString())); 
+            Console.WriteLine(formatter.Format("External Number", ExternalId.ToString())); 
             Console.WriteLine(formatter.Format("Member", Member));
             foreach (var item in Procedures)
             {

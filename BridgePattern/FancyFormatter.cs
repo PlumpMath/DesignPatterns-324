@@ -10,7 +10,7 @@ namespace BridgePattern
     {
         public string Format(string key, string value)
         {
-            return string.Format("--== {0} ----- =-- {1}", key, value);
+            return string.Format("<bold> {0} </bold>\t\t {1}", key, value);
         }
     }
 }

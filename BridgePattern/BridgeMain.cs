@@ -18,15 +18,20 @@ namespace ConsoleApplication1
             var fancy = new FancyFormatter();
 
             var pharmacyReferral = new Pharmacy(standard);
+            pharmacyReferral.PharmacyReferralId = 9;
+            pharmacyReferral.Member = "Clarence Worley";
             pharmacyReferral.NationalDrugCode.Add("313", "Medicine");
             authorizations.Add(pharmacyReferral);
 
             var externalReferral = new External(executive);
+            externalReferral.ExternalId = 7;
+            externalReferral.Member = "Jim Morrison";
             externalReferral.Procedures.Add("757", "Evaluation");
             authorizations.Add(externalReferral);
 
             var internalReferral = new Internal(fancy)
             {
+                Member = "Pedro De Pacas",
                 InternalId = 9,
                 Symptoms = "Flu"
             };

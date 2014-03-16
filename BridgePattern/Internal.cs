@@ -21,7 +21,7 @@ namespace BridgePattern
 
         public override void Print()
         {
-            Console.WriteLine(formatter.Format("Pharmacy Number", InternalId.ToString()));
+            Console.WriteLine(formatter.Format("Internal Number", InternalId.ToString()));
             Console.WriteLine(formatter.Format("Member", Member));
             Console.WriteLine(formatter.Format("Symptoms", Symptoms));
             Console.WriteLine();
